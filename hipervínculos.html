@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://imaginative-syrniki-409324.netlify.app/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica de Hipervínculos — IPN &amp; Hello Kitty</title>
+  <style>
+    :root {
+      --color-ipn-guinda: #6B1C24;       /* Guinda oficial IPN */
+      --color-ipn-guinda-light: #8B2C36; /* Guinda más claro para hovers */
+      --color-hk-pink: #FF6B8B;          /* Rosa Hello Kitty */
+      --color-hk-soft-pink: #FFF0F2;     /* Rosa suave de fondo */
+      --color-text-dark: #2D2727;        /* Off-black para legibilidad */
+      --color-bg-light: #FCFCFC;         /* Blanco roto de fondo */
+      --color-border: #E5E5E5;           /* Borde sutil */
+      --font-serif: 'Times New Roman', Times, serif;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      color: var(--color-text-dark);
+      background-color: var(--color-bg-light);
+      padding: 40px 20px;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      border-top: 6px solid var(--color-ipn-guinda);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: var(--color-ipn-guinda);
+      margin-bottom: 5px;
+      font-weight: normal;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 1.1em;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 40px;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.9em;
+      color: var(--color-ipn-guinda);
+      border-bottom: 2px solid var(--color-ipn-guinda);
+      padding-bottom: 8px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-family: var(--font-sans);
+      font-size: 1.3em;
+      color: #444;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-family: var(--font-sans);
+      font-size: 1.25em;
+      color: var(--color-ipn-guinda);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.15em;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    /* Links styling */
+    a {
+      color: var(--color-ipn-guinda);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color var(--transition-speed, 0.2s), border-bottom var(--transition-speed, 0.2s);
+      border-bottom: 1px dashed var(--color-ipn-guinda);
+    }
+
+    a:hover {
+      color: var(--color-hk-pink);
+      border-bottom: 1px solid var(--color-hk-pink);
+    }
+
+    /* Inline links spacing */
+    .enlaces-linea a {
+      margin-right: 25px;
+      display: inline-block;
+    }
+
+    /* Images */
+    img {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform var(--transition-speed, 0.2s);
+    }
+
+    img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Hello Kitty image link specific styling */
+    .kitty-link img {
+      max-width: 200px;
+      border: 3px solid var(--color-hk-pink);
+    }
+
+    /* File lists and blocks */
+    .file-box {
+      background-color: var(--color-hk-soft-pink);
+      border-left: 4px solid var(--color-hk-pink);
+      padding: 20px;
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+      margin: 20px 0;
+    }
+
+    .file-box a {
+      color: #b33951;
+      border-bottom-color: var(--color-hk-pink);
+    }
+
+    .file-box a:hover {
+      color: var(--color-text-dark);
+    }
+
+    /* Email Section */
+    .email-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #fdfdfd;
+      border: 1px solid var(--color-border);
+      padding: 15px 25px;
+      border-radius: var(--border-radius);
+      margin: 20px 0;
+    }
+
+    .email-container img {
+      margin: 0;
+      max-width: 50px;
+      box-shadow: none;
+    }
+
+    /* Menu Navigation */
+    .menu-container {
+      background-color: #fcfcfc;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 20px;
+      margin: 20px 0 35px 0;
+    }
+
+    .menu-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-links li {
+      margin: 0;
+    }
+
+    .menu-links a {
+      display: block;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 0.95em;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      border-bottom: none;
+    }
+
+    .menu-links a:hover {
+      background: var(--color-ipn-guinda);
+      color: #ffffff;
+      border-color: var(--color-ipn-guinda);
+    }
+
+    /* Back-to-menu button styling */
+    .btn-back-menu {
+      float: right;
+      border-bottom: none;
+    }
+
+    .btn-back-menu img {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border: 2px solid var(--color-ipn-guinda);
+      background: #fff;
+    }
+
+    .btn-back-menu img:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Symbol Section Block */
+    .simbolo-block {
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 25px;
+      margin-bottom: 30px;
+      overflow: hidden; /* Clear floating button */
+    }
+
+    .simbolo-block:last-child {
+      border-bottom: none;
+    }
+
+    blockquote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: #555;
+      border-left: 3px solid var(--color-ipn-guinda);
+      margin: 15px 0;
+      padding-left: 15px;
+    }
+
+    .porra-grito {
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: 1.25em;
+      font-weight: bold;
+      color: var(--color-ipn-guinda);
+      line-height: 1.8;
+      background-color: #fbf6f7;
+      border: 1px dashed var(--color-ipn-guinda);
+      padding: 20px;
+      border-radius: var(--border-radius);
+      margin: 20px auto;
+      max-width: 400px;
+    }
+
+    /* Clearfix for blocks */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .menu-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Hipervínculos</h1>
+  <p class="subtitle">Práctica de navegación web, archivos locales, enlaces de correo y anclas internas</p>
+
+  <!-- ========================================== -->
+  <!-- ENLACES EXTERNOS -->
+  <!-- ========================================== -->
+  <h2>Hipervínculos externos</h2>
+
+  <h3>A una página de Internet</h3>
+  <p class="enlaces-linea">
+    <a href="https://www.google.com/" target="_blank" rel="noopener">Google</a>
+    <a href="https://tiendapanini.com.mx/marvel-comics/capitan-america" target="_blank" rel="noopener">Página donde encontraré a mi Capi</a>
+    <a href="https://elpais.com/mexico/" target="_blank" rel="noopener">El periódico de México</a>
+  </p>
+
+  <h3>A una página de Internet en otra pestaña</h3>
+  <p>
+    <a href="https://en.wikipedia.org/wiki/Zo%C3%A9_(band)" target="_blank" rel="noopener">Noticias sobre el grupo Zoé</a>
+  </p>
+
+  <h3>A una página de Internet en una imagen</h3>
+  <p>
+    <a href="https://www.sanrio.com/" target="_blank" rel="noopener" class="kitty-link">
+      <img src="./hipervínculos_files/hellokitty.jpg" alt="Hello Kitty Oficial" title="Ir al sitio oficial de Sanrio">
+    </a>
+  </p>
+
+  <!-- ========================================== -->
+  <!-- ARCHIVOS Y CORREO -->
+  <!-- ========================================== -->
+  <h3>A un archivo</h3>
+  <div class="file-box">
+    <a href="./hipervínculos_files/hellokitty.jpg" target="_blank">Imagen de Kitty (JPG)</a><br><br>
+    <a href="https://imaginative-syrniki-409324.netlify.app/historiahk.docx" download="">Historia de HK (Documento Word)</a><br><br>
+    <a href="https://imaginative-syrniki-409324.netlify.app/hipervinculos.pdf" target="_blank">Documento PDF (Hipervínculos)</a><br><br>
+    <a href="https://imaginative-syrniki-409324.netlify.app/hipervinculos.mp4" target="_blank">Video de Hipervínculos (MP4)</a>
+  </div>
+
+  <h2>Hipervínculos a correo</h2>
+  <div class="email-container">
+    <img src="./hipervínculos_files/correo.gif" alt="Correo Animado">
+    <a href="mailto:correo@ejemplo.com">Mi correo (Enviar Mensaje)</a>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- ENLACES INTERNOS (IPN) -->
+  <!-- ========================================== -->
+  <h2>Hipervínculos internos</h2>
+
+  <!-- Menú de navegación con ancla de retorno -->
+  <div class="menu-container">
+    <a id="menu"></a>
+    <h3>Menú de Símbolos Institucionales</h3>
+    <ul class="menu-links">
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#mision">Misión</a></li>
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#vision">Visión</a></li>
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#escudo">Escudo</a></li>
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#lema">Lema</a></li>
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#himno">Himno</a></li>
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#mascota">Mascota</a></li>
+      <li><a href="https://imaginative-syrniki-409324.netlify.app/#porra">Porra</a></li>
+    </ul>
+  </div>
+
+  <center>
+    <h1 style="font-size: 2em; margin-bottom: 30px;">Instituto Politécnico Nacional</h1>
+  </center>
+
+  <!-- Misión -->
+  <div class="simbolo-block clearfix">
+    <a id="mision"></a>
+    <h4>Misión Institucional</h4>
+    <p>El Instituto Politécnico Nacional contribuye al desarrollo económico y social de la nación, a través de la formación integral de personas competentes; de la investigación, el desarrollo tecnológico y la innovación. Además tiene reconocimiento internacional por su calidad e impacto social.</p>
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+  <!-- Visión -->
+  <div class="simbolo-block clearfix">
+    <a id="vision"></a>
+    <h4>Visión</h4>
+    <p>Institución educativa incluyente de prestigio internacional, que con su comunidad contribuye al desarrollo científico, tecnológico e innovación con impacto social en el país.</p>
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+  <!-- Escudo -->
+  <div class="simbolo-block clearfix">
+    <a id="escudo"></a>
+    <h4>Escudo</h4>
+    <p>Fueron las inquietudes estudiantiles quienes tomaron la iniciativa para crear los símbolos que identificaran a la naciente institución politécnica. En los años 1944-1945 la Federación Nacional de Estudiantes Técnicos (FNET) lanzó una convocatoria para diseñar un escudo representativo de las escuelas que integraban el IPN. El primer lugar fue otorgado al alumno Armando López Fonseca quien con ayuda de su compañero Jorge Grajales, lograron que su diseño fuera el ganador. El escudo fue modificado en 1948 conservando sus elementos originales.</p>
+    <img src="./hipervínculos_files/escudo.jpg" alt="Escudo del Instituto Politécnico Nacional" style="max-width: 320px; margin: 20px auto;">
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+  <!-- Lema -->
+  <div class="simbolo-block clearfix">
+    <a id="lema"></a>
+    <h4>Lema: "La Técnica al Servicio de la Patria"</h4>
+    <p>El lema era utilizado por algunos estudiantes desde antes de la creación del IPN, pero fue durante el Primer Congreso Nacional de Estudiantes Técnicos, realizado en la ciudad de Chihuahua en 1937, donde el estudiante Jesús Robles propuso utilizar la frase "La Técnica al Servicio de una Patria Mejor". Años más tarde este lema fue modificado por "La Técnica al Servicio de la Patria", el cual expresa los ideales del Politécnico.</p>
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+  <!-- Himno -->
+  <div class="simbolo-block clearfix">
+    <a id="himno"></a>
+    <h4>Himno</h4>
+    <p>Para obtener el Himno se convocó a un concurso abierto para su creación, pero no hubo eco al llamado. Luego de dos nuevas convocatorias, la poetisa Carmen de la Fuente resultó triunfadora del certamen y la Dirección General del Instituto le premió, el 15 de julio de 1961. Posteriormente, como la música aún no estaba elegida, se convocó a un certamen para poner música a la letra del himno del IPN, y resultó triunfador Armando González Domínguez, pianista reconocido y director de varias orquestas.</p>
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+  <!-- Mascota -->
+  <div class="simbolo-block clearfix">
+    <a id="mascota"></a>
+    <h4>Mascota</h4>
+    <p>Es tradición que las Instituciones de Educación Superior, y particularmente los equipos deportivos, elijan una mascota; la del Instituto Politécnico Nacional es un burro blanco. Se conocen por tradición oral diferentes versiones que al paso del tiempo se funden entre la realidad y el mito, el caso del Instituto Politécnico Nacional es de las más conocidas, la razón es muy particular. Se dice que al establecer los límites del terreno donde se construía el Instituto, en la Ex Hacienda de Santo Tomás durante los años 30, quedó encerrada una burra blanca; al ser descubierta por los estudiantes e integrantes del primer equipo de fútbol americano la tomaron como su mascota. Con el paso de los años, la burra se convirtió en uno de los símbolos del Politécnico, fundamentalmente en el ámbito deportivo.</p>
+    <img src="./hipervínculos_files/mascota.jpg" alt="Burro Blanco — Mascota del IPN" style="max-width: 250px; margin: 20px auto;">
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+  <!-- Porra -->
+  <div class="simbolo-block clearfix">
+    <a id="porra"></a>
+    <h4>Porra</h4>
+    <p>Uno de los deportes que creció junto con el Politécnico fue el fútbol americano. Desde sus inicios ha dejado profunda huella entre sus seguidores, quienes para apoyarlo han entonado diferentes porras: desde el chiquitibum hasta el huélum; sin embargo, es éste el que ha permanecido vigente a través de un grito de fiesta para celebrar y cerrar todos los eventos. El 16 de marzo de 1985 el autor de la porra, Víctor Chambón Burgoa, hizo el siguiente relato:</p>
+
+    <blockquote>
+      "En 1937, al saber que había hecho algunas canciones que cantábamos los jugadores de fútbol americano del IPN, se acercó a mí un grupo de muchachos y muchachas que estaban iniciando el primer núcleo de directores de la porra del Politécnico. Ahora bien, en el Poli, la palabra para reunir a los estudiantes era -¡huelga, huelga!-. Basado en esto, sugerí que se utilizara la palabra 'huélum'. Además, decidimos que no se utilizara la palabra 'rah' (que se usaba en las porras estadounidenses) y que en su lugar se usara 'gloria' para expresar nuestro orgullo por la institución."
+    </blockquote>
+
+    <p>La porra oficial del Instituto Politécnico Nacional es:</p>
+    <div class="porra-grito">
+      ¡Huélum, Huélum, Gloria!<br>
+      A la cachi cachi porra,<br>
+      a la cachi cachi porra,<br>
+      pim pum porra,<br>
+      pim pum porra,<br>
+      Politécnico, Politécnico, ¡Gloria!
+    </div>
+
+    <a href="https://imaginative-syrniki-409324.netlify.app/#menu" class="btn-back-menu">
+      <img src="./hipervínculos_files/menu.png" alt="Volver al menú">
+    </a>
+  </div>
+
+</div>
+
+
+
+</body></html>
